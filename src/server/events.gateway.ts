@@ -1,10 +1,4 @@
-import {
-  OnGatewayConnection,
-  OnGatewayInit,
-  SubscribeMessage,
-  WebSocketGateway,
-  WsResponse
-} from '@nestjs/websockets';
+import { OnGatewayConnection, OnGatewayInit, SubscribeMessage, WebSocketGateway, WsResponse } from '@nestjs/websockets';
 
 @WebSocketGateway()
 export class EventsGateway implements OnGatewayInit, OnGatewayConnection {
@@ -22,7 +16,7 @@ export class EventsGateway implements OnGatewayInit, OnGatewayConnection {
 
     const response = {
       ping: data,
-      pong: new Date()
+      pong: new Date(),
     };
 
     return { event, data: response };
