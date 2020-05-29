@@ -8,16 +8,16 @@ import {
 
 @WebSocketGateway()
 export class EventsGateway implements OnGatewayInit, OnGatewayConnection {
-  afterInit(server: any): any {
+  public afterInit(server: any): any {
     return undefined;
   }
 
-  handleConnection(client: any): any {
+  public handleConnection(client: any): any {
     return undefined;
   }
 
   @SubscribeMessage('events')
-  onEvent(client, data): WsResponse<any> {
+  public onEvent(client, data): WsResponse<any> {
     const event = 'events';
 
     const response = {

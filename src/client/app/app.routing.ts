@@ -1,5 +1,4 @@
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from "./about/about.component";
 
 export const routes = [
   {
@@ -13,6 +12,6 @@ export const routes = [
   },
   {
     path: 'contact',
-    loadChildren: './contact/contact.module#ContactModule'
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
   }
 ];

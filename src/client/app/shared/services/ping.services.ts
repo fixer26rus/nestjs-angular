@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Socket } from 'ng-socket-io';
-
-import 'rxjs/add/operator/map';
+import { Socket } from 'ngx-socket-io';
 
 @Injectable()
 export class PingService {

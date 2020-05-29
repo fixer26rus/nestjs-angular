@@ -5,7 +5,6 @@ export class ApiController {
 
   @Get('hello')
   root() {
-
     return {
       message: 'Hello World!',
     };
